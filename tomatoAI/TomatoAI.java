@@ -19,7 +19,7 @@ public class TomatoAI {
 
     public static void main (String[] args) throws IOException {
         plantDB = new HashMap<String, Integer>();
-        plantDB.put("tomato", 1);
+        plantDB.put("tomato", 2);
         plantDB.put("potato", 1);
         plantDB.put("peach", 8085);
 
