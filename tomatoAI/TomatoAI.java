@@ -33,9 +33,8 @@ public class TomatoAI {
         server.setExecutor(null); // creates a default executor
         server.start();
         Plant test = new Plant("test", "tomato", "sunny", 100, 100, 100, 20, 50, 30, 100);
-        System.out.println(calculateSeconds(weatherDB, plantDB, test));
-
     }
+
     public static int consumptionNumber(HashMap<String, Integer> map, String name) {
         return map.get(name);
     }
@@ -66,7 +65,12 @@ public class TomatoAI {
     static class GetHandler implements HttpHandler {
 
         public void handle(HttpExchange t) throws IOException {
-            Plant test = new Plant("test", "tomato", "sunny", 100, 100, 100, 20, 50, 30, 100);
+            String url = t.getRequestURI().toString();
+            System.out.println(url);
+
+            String[] strArr = url.split("/");
+            Plant test = new Plant(strArr[2], strArr[3], strArr[4], Double.valueOf(strArr[5]), Double.valueOf(strArr[6]), Double.valueOf(strArr[7]), Double.valueOf(strArr[8]),
+                    Double.valueOf(strArr[9]), Double.valueOf(strArr[10]), Double.valueOf(strArr[11]));
 
             // add the required response header for a PDF file
             Headers h = t.getResponseHeaders();
@@ -83,5 +87,4 @@ public class TomatoAI {
             os.close();
         }
     }
-
 }

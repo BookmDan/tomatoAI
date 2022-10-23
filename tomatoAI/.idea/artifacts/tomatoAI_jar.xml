@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="tomatoAI:jar">
+    <output-path>$PROJECT_DIR$/../artifacts/tomatoAI_jar</output-path>
+    <root id="archive" name="tomatoAI.jar">
+      <element id="module-output" name="tomatoAI" />
+    </root>
+  </artifact>
+</component>
