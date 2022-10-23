@@ -4,13 +4,14 @@ public class Plant {
     String plantType = "";
     String weather = "";
     int plantAge = 0;
-    int plantSize = 0;
-    int waterConsumption = 0;
-    int loamAmount = 0;
-    int clayAmount = 0;
-    int sandAmount = 0;
+    double plantSize = 0;
+    double waterConsumption = 0;
+    double loamAmount = 0;
+    double clayAmount = 0;
+    double sandAmount = 0;
+    double hoseFlow = 0;
 
-    Plant(String name, String plantType, String weather, int plantAge, int plantSize, int waterConsumption, int loamAmount, int clayAmount, int sandAmount) {
+    Plant(String name, String plantType, String weather, int plantAge, double plantSize, double waterConsumption, double loamAmount, double clayAmount, double sandAmount, double hoseFlow) {
         this.name = name;
         this.plantType = plantType;
         this.weather = weather;
@@ -20,6 +21,7 @@ public class Plant {
         this.loamAmount = loamAmount;
         this.clayAmount = clayAmount;
         this.sandAmount = sandAmount;
+        this.hoseFlow = hoseFlow;
     }
 
     public String getName() {
@@ -46,24 +48,28 @@ public class Plant {
         plantSize = newSize;
     }
 
-    public int getPlantSize() {
+    public double getPlantSize() {
         return plantSize;
     }
 
-    public int getWaterConsumption() {
+    public double getWaterConsumption() {
         return waterConsumption;
     }
 
-    public int getLoamAmount() {
+    public double getLoamAmount() {
         return loamAmount;
     }
 
-    public int getClayAmount() {
+    public double getClayAmount() {
         return clayAmount;
     }
 
-    public int getSandAmount() {
+    public double getSandAmount() {
         return sandAmount;
+    }
+
+    public double getHoseFlow() {
+        return hoseFlow;
     }
 
     public void setNewSoilComp(int newLoam, int newClay, int newSand) {
