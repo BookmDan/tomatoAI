@@ -68,6 +68,10 @@ public class Plant {
         return sandAmount;
     }
 
+    public void setHoseFlow(double newHoseFlow) {
+        hoseFlow = newHoseFlow;
+    }
+
     public double getHoseFlow() {
         return hoseFlow;
     }

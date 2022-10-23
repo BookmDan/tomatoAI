@@ -11,8 +11,8 @@ public class TomatoAI {
         weatherDB.put("cloudy", 2);
         weatherDB.put("rainy", 1);
 
-        // Plant test = new Plant("test", "tomato", "sunny", 100, 100, 100, 20, 50, 30);
-        // System.out.println(calculateSeconds(weatherDB, plantDB, test));
+        Plant test = new Plant("test", "tomato", "sunny", 100, 100, 100, 20, 50, 30, 100);
+        System.out.println(calculateSeconds(weatherDB, plantDB, test));
 
     }
     public static int consumptionNumber(HashMap<String, Integer> map, String name) {
@@ -36,7 +36,7 @@ public class TomatoAI {
         double trueSize = p.getPlantSize() * sizeWeight;
         double trueConsumption = consumptionNumber(plantDB, p.getPlantType()) * consumptionWeight;
         double trueSoilWeight = (p.getLoamAmount() + p.getClayAmount() + p.getSandAmount()) * soilCompWeight;
-        double truehoseFlowWeight = p.getHoseFlow() * hoseFlowWeight;
+        double trueHoseFlowWeight = p.getHoseFlow() * hoseFlowWeight;
 
         return (trueWeather + trueAge + trueSize + trueAge + trueConsumption + trueSoilWeight + trueHoseFlowWeight) * 0.30;
 
